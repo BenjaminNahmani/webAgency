@@ -2,13 +2,15 @@
 <html lang="fr">
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
 	<title>WebAgency</title>
 	<meta name="description" content="Le site internet de la préstigieuse WebAgency.">
 	
 	
 	<script src="https://kit.fontawesome.com/d91cac8640.js" crossorigin="anonymous"></script>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="icon" type="image/png" href="images/logo.ico" />
+
 	
 </head>
 
@@ -17,7 +19,7 @@
 
 			<!-- Debut de l'en tête -->
 
-		<nav class="la_nav">
+		<nav class="navbar">
 			<div id="logo">
 				<img src="images/logo.png" alt="Le Logo du site" id="img_logo">
 			</div>
@@ -26,9 +28,9 @@
 			<ul id="list_nav">
 
 				<li><a href="#slider" class="bouton">Acceuil</a></li>
-				<li><a href="#Services" class="bouton">Services</a> </li>
-				<li><a href="#Portfolio_nav" class="bouton">Portfolio</a></li>
-				<li><a href="#Contact" class="bouton">Contact</a> </li>	
+				<li><a href="#services" class="bouton">Services</a> </li>
+				<li><a href="#portfolio_nav" class="bouton">Portfolio</a></li>
+				<li><a href="#contact" class="bouton">Contact</a> </li>	
 
 			</ul>
 
@@ -41,17 +43,17 @@
 			<figure>
 				<img src="images/slider/bg1.jpg" alt="Enfant avec les mains pleine de peinture" >
 
-				<div id="info_slider">
+				<div id="slider_info">
 
 					<i class="fas fa-chevron-left"></i>
 
 				<div id="infos">
 					<h1>
-						<strong>WEBAGENCY</strong>: L'AGENCE DE TOUS VOS PROJETS !
+						<span>WEBAGENCY</span>: L'AGENCE DE TOUS VOS PROJETS !
 					</h1>
 
 					<p id="subtitle_infos">
-						Vous avez un projet ? La WebAgency vous aideras à le réaliser !
+						Vous avez un projet ? La WebAgency vous aide à le réaliser !
 					</p>
 
 					<div class="button button1">
@@ -65,7 +67,7 @@
 				<i class="fas fa-chevron-right"></i>
 				</div>
 			
-				<div id="barre_charg">
+				<div id="loading_bar">
 					<div id="blue_charg">
 						
 					</div>						
@@ -76,80 +78,107 @@
 		<section class="services">
 			<div id="presentation">
 
-				<h1 id="Services">NOS SERVICES</h1>
+				<h2 id="services">NOS SERVICES</h2>
 
-				<div class="separateur">
+			 	<div class="separate">
+			                
+			     	<div class="line"><hr/></div>
+
+			        <div class="blue_point">
+			        	<i class="fa fa-circle" aria-hidden="true"></i>
+			        </div>
+
+			      	<div class="line"><hr/></div>
+
+			    </div>
+
 				</div>
+					<p>
+						Nous pouvons exaucer tous vos souhaits, a condition qu'ils se rapportent au Développement Web.
+					</p>
 
-				<p>
-					Nous sommes une entreprise de designer. En effet, nous pouvons exaucer tous vos souhaits, a condition qu'ils se rapportent au design.
-				</p>
+					<p>
+						Il nous suffit de quelques informations pour qu'une équipe dynamique et professionnelle se charge de tout le travail.
+					</p>
+			</div>
 
-				<p>
-					Il nous suffit de quelques informations pour qu'une équipe dynamique et professionnelle se charge de tout le travail.
-				</p>
-
-				</div>
-
-				<div class="contenu_serv">
+			<div class="serv_content">
 				
-					<div id="ordi">
-						<img src="images/main-feature.png" alt="">
+				<div id="computeur">
+					<img src="images/main-feature.png" alt="">
 
 				</div>
+
 				<div class="flex-container">
-					<div id="ui">
+
+					<div class="flex_ico UX">
 						<div class="serv_ico">
 							<i class="fas fa-chart-line"></i>
-							
 						</div>
 
-						<h2>UI Design</h2>
-
-						<p>
-							Le visuel est un des aspects prioritaires pour connaitre le succès. Grâce aux nombreuses années d'expérience, nous serons capables de vous proposer un service de qualité.
-						</p>
-
+						<div class="ico_info">
+							<h3>UX Design</h3>
+							<p>
+								L'architecture Web, les fonctionnalités, l'analyse de données est pleine d'autres, sont efficacement étudiés par notre équipe.
+							</p>
+						</div>
 					</div>
 
-					<div id="ux">
+					<div class="flex_ico UI">
 						<div class="serv_ico">
-							<i class="fas fa-chart-line"></i>
+							<i class="fas fa-cubes"></i>		
 						</div>
 
-						<h2>UX Design</h2>
-						<p>
-							L'architecture Web, les fonctionnalités, l'analyse de données est pleine d'autres, sont efficacement étudiés par notre équipe.
-						</p>
+						<div class="ico_info">
+							<h3>UI Design</h3>
+
+
+							<p>
+								Le visuel est un des aspects prioritaires pour connaitre le succès. Grâce aux nombreuses années d'expérience, nous serons capables de vous proposer un service de qualité.
+							</p>
+						</div>
 					</div>
 
-					<div id="seo">
+					<div class="flex_ico SEO">
 						<div class="serv_ico">
-							<i class="fas fa-chart-line"></i>
+							<i class="fas fa-chart-pie"></i>
 						</div>
 
-						<h2>SEO</h2>
-						<p>
-							Optimisation pour les moteurs de recherche.	
+						<div class="ico_info">
+							<h3>SEO</h3>
+							<p>
+								Optimisation pour les moteurs de recherche.	
 							Comprends les activités visant à renforcer la visibilité d’un site sur les moteurs de recherche, ceci dans les résultats naturels.
-						</p>
+							</p>
+						</div>
 					</div>
 				</div>
 			</div>	
 		</section>
 
 		<section class="portfolio">
-			<h1 id="Portfolio_nav">NOS PROJETS</h1>
-			<div class="separateur">
-			</div>
+			<h2 id="portfolio_nav">NOS PROJETS</h2>
+			<div class="separate">
+			                
+			    <div class="line"><hr/></div>
+
+			    <div class="blue_point">
+			        <i class="fa fa-circle" aria-hidden="true"></i>
+			   	</div>
+
+			    <div class="line"><hr/></div>
+
+			    </div>
+
+				</div>
 			<p>
-				Jugez notre travail par vous-même. Voici quelques projets mené a bien par nos équipes.
+				Jugez notre travail par vous-même. Voici quelques projets que nous avons réalisé.
 			</p>
 			<nav id="menu_port">
 				<ul>
 
 					<li class="blue_fixed">
-						<a href="#" id="Works_White">All Works</a>
+						<a href="#" id="works_white">All Works</a>
 						<i class="fas fa-caret-down"></i>
 					</li>
 
@@ -178,7 +207,7 @@
 					<figcaption>
 						<i class="fas fa-eye"></i>
 						<div class="text_port">
-							<h3>De jolies masques</h3>
+							<h4>De jolies masques</h4>
 							<p>Pour vos soirées déguisée</p>
 						</div>
 					</figcaption>
@@ -189,7 +218,7 @@
 					<figcaption>
 						<i class="fas fa-eye"></i>
 						<div class="text_port">
-							<h3>Un lapin décoratif</h3>
+							<h4>Un lapin décoratif</h4>
 							<p>Pas mal dans le salon ?</p>
 						</div>
 					</figcaption>
@@ -200,7 +229,7 @@
 					<figcaption>
 						<i class="fas fa-eye"></i>
 						<div class="text_port">
-							<h3>Pompadour</h3>
+							<h4>Pompadour</h4>
 							<p>Vous allez l'adorer</p>
 						</div>
 					</figcaption>
@@ -211,7 +240,7 @@
 					<figcaption>
 						<i class="fas fa-eye"></i>
 						<div class="text_port">
-							<h3>Un croquis</h3>
+							<h4>Un croquis</h4>
 							<p>Toujours à portée de main</p>
 						</div>
 					</figcaption>
@@ -224,7 +253,7 @@
 					<figcaption>
 						<i class="fas fa-eye"></i>
 						<div class="text_port">
-							<h3>Des jolies sac</h3>
+							<h4>Des jolies sac</h4>
 							<p>Un shopping réussit</p>
 						</div>
 					</figcaption>
@@ -235,7 +264,7 @@
 					<figcaption>
 						<i class="fas fa-eye"></i>
 						<div class="text_port">
-							<h3>Une petite ville</h3>
+							<h4>Une petite ville</h4>
 							<p>Vraiment petite</p>
 						</div>
 					</figcaption>
@@ -246,7 +275,7 @@
 					<figcaption>
 						<i class="fas fa-eye"></i>
 						<div class="text_port">
-							<h3>Une fusée</h3>
+							<h4>Une fusée</h4>
 							<p>Direction l'éspace !</p>
 						</div>
 					</figcaption>
@@ -257,7 +286,7 @@
 					<figcaption>
 						<i class="fas fa-eye"></i>
 						<div class="text_port">
-							<h3>Starter Pack du pro</h3>
+							<h4>Starter Pack du pro</h4>
 							<p>Emportez-le partout</p>
 						</div>
 					</figcaption>
@@ -279,7 +308,7 @@
 					<div id="infos_contact">
 
 
-						<h2 id="Contact">Contact Info</h2>
+						<h2 id="contact">Contact Info</h2>
 
 						<h3 id="web">WebAgency SAS</h3>
 

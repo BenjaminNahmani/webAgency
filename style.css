@@ -49,30 +49,52 @@ p{
 h1{
 	text-align: center;
 	color: rgb(39, 39, 39);
-	font-size: 5em;
+	margin: 20px;
+	font-size: 3em;
+	font-family: 'robotobold', sans-serif;
+}
+
+h2{
+	font-size: 1.5em;
+	margin-bottom: 0px;
+	color: rgb(39, 39, 39);
+	text-align: center;
+	margin: 20px;
+	font-family: 'robotobold', sans-serif;
+;
+}
+
+h3{
+	text-align: center;
+	color: rgb(39, 39, 39);
+	font-size: 1.2em;
 	font-family: 'robotobold', sans-serif;
 }
 /* == Les séparateur utilisé dans plusieurs sections. */
-.separateur{
-	width: 20%;
-	height: 2px;
-	background-color: rgb(237, 237, 237);
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: 20px;
-	position: relative;
+.separate{
+	display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    width: 146px;
+    margin: auto;
+}   
+
+.line{
+	width: 60px;
+    color: rgb(237, 237, 237);
 }
-.separateur::after{ /* Rond bleu */
-	content: "";
-	position: absolute;
-	width: 10px;
-	height: 10px;
-	padding: 0.2em 0.2em 0.2em 0.2em;
-    border: solid 3px;
-    border-color: white;
+
+.blue_point{
+text-align: center;
+    color: #5cadd3;
+    font-size: 1em;
+    margin: auto;
+    background-color: #fff;
     border-radius: 50%;
-    left: 46%;
-    bottom: -10px;
+    border: 3px solid #fff;
+    width: 22px;
+    height: auto;
 }
 
 #blocpage{
@@ -82,7 +104,7 @@ h1{
 /* ----------------------------- */
 /* == 			NAVBAR			 */
 /* ----------------------------- */
-.la_nav{
+.navbar{
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -107,15 +129,31 @@ h1{
 /* == 			SLIDER			 */
 /* ----------------------------- */
  
-#slider{
+#slider img, #button, .fa-chevron-left, .fa-chevron-right, #barre_charg{
 	display: none;	
 }
+
+#infos{
+	padding: 10px;
+	background-color: rgb(245, 245, 245);
+	border-radius: 2%;
+}
+
+#slider h1{
+	font-size: 2em;
+}
+
+span{
+	color: #5CADD3; /* Couleur BLEU du WEBAGENCY */
+}
+
+/* Seul les infos sont visible. */
 
 /* ----------------------------- */
 /* == 		  SERVICES		     */
 /* ----------------------------- */
 
-#ordi{
+#computeur{
 	display: none;
 }
 #presentation{
@@ -134,7 +172,7 @@ h1{
 	display: flex;
 	flex-direction: column;
 	width: 80%;
-	margin-left: 10%;
+	margin: auto;
 }
 
 .flex-container h2{
@@ -150,7 +188,7 @@ h1{
 	color: rgb(92,173,211);
 }
 
-.fa-chart-line{
+.fa-chart-line, .fa-cubes, .fa-chart-pie{
 	position: relative;
 	padding: 15px;
 	border: 1px solid grey;
@@ -158,7 +196,7 @@ h1{
 	border-color: rgb(221, 221, 221);
 }
 
-.fa-chart-line::after{ /* Le petit rond bleu */
+.fa-chart-line::after, .fa-cubes::after, .fa-chart-pie::after{ /* Le petit rond bleu */
 	content: "";
 	position: absolute;
 	width: 3px;
@@ -229,7 +267,7 @@ figcaption{
 	border-bottom: #468CAD solid 3px;
 }
 
-#menu_port #Works_White{
+#menu_port #works_white{
 	color: white;
 }
 
@@ -271,6 +309,7 @@ iframe{
 	height: 200px;
 	margin-top: 5%;
 	margin-left: 7.8%;
+	border: none;
 }
 
 .form_contact{
@@ -331,10 +370,19 @@ button{
 
 @media screen and (min-width: 540px){ /* TABLETTE */
 
+	h1, h2{
+		font-size: 3em;
+	}
+
+	h3{
+		font-size: 1.5em;
+	}
+
+
 /* ----------------------------- */
 /* == 			NAVBAR TAB		 */
 /* ----------------------------- */
-	.la_nav{
+	.navbar{
 		flex-direction: row;
 		margin: 10px;
 	}
@@ -352,10 +400,14 @@ button{
 /* ----------------------------- */
 /* == 		  SLIDER TAB      	 */
 /* ----------------------------- */
+	#slider img, #button, .fa-chevron-left, .fa-chevron-right, #barre_charg{
+		display: block;
+	}
+
 	#slider{
-	display: flex;	
-	position: relative;
-	margin-bottom: 20px;
+		display: flex;	
+		position: relative;
+		margin-bottom: 20px;
 	}
 
 	#slider figure{
@@ -371,7 +423,12 @@ button{
 	} 
 
  /* Les infos dans le slider */
-	#info_slider{
+
+ 	#infos{
+ 		background: none;
+ 	}
+
+	#slider_info{
 		position: absolute;
 		display: flex;
 	    justify-content: space-between;
@@ -384,16 +441,12 @@ button{
 		font-size: 1.1em;
 	}
 
-	#info_slider h1{
+	#slider_info h1{
 		margin-top: 2px;
 		margin-bottom: 3px;
 		text-align: left;
 		font-size: 1.8em;
 		color: white;
-	}
-
-	strong{
-		color: #5CADD3;
 	}
 
 	#subtitle_infos{
@@ -427,7 +480,7 @@ button{
 	}
 
 /* La barre bleu de chargement en bas du slider */
-	#barre_charg{
+	#loading_bar{
 		position: absolute;
 		width: 100%;
 		bottom: 0px;
@@ -458,10 +511,10 @@ button{
 	    background-color: #5CADD3;
     }
 
-	#ordi{
+	#computeur{
 		display: block;
 		width: 50%;
-		margin-left: 25%;
+		margin: auto;
 	}
 
 /* ----------------------------- */
@@ -531,7 +584,7 @@ button{
 	.overmap{
 		position: absolute;
 		z-index: 1;
-		width: 99.5%;
+		width: 99.2%;
 		height: 23%;
 		top: 0px;
 		left: 0px;
@@ -557,12 +610,10 @@ button{
 /* ----------------------------- */
 /* == 		  NAVBAR LAPTOP		 */
 /* ----------------------------- */
-	.la_nav{
+	.navbar{
 		position: fixed;
 	    z-index: 9999;
-		flex-direction: row;
 		justify-content: space-around;
-		align-items: center;
 		width: 100%;
 		max-width: 1900px;
 		margin: 0px;
@@ -596,7 +647,7 @@ button{
 		margin-top: 5%;
 	}
 
-	#info_slider{
+	#slider_info{
 		width: 100%;
 		font-size: 1.5em;
 	}
@@ -623,22 +674,23 @@ button{
 	    margin-bottom: 65px;
 	}
 
-	.contenu_serv{
+	.serv_content{
 		display: flex;
-	}
-
-	#ordi{
-		padding: 2%;
-		margin-top: 9%;
-		margin-left: 0%;
 	}
 
 	.flex-container{
 		width: 35%;
 		justify-content: center;
-		margin-left: 6%;
 	}
 
+	.flex_ico{
+		display: flex;
+		align-items: center;
+	}
+
+	.ico_info{
+		margin-left: 10%;
+	}
 /* ----------------------------- */
 /* == 	  PORTFOLIO LAPTOP		 */
 /* ----------------------------- */
@@ -683,7 +735,7 @@ button{
 		opacity: 0;
 	}
 
-	.text_port p, h3{
+	.text_port p, h4{
 		text-align: left;
 		line-height: 5px;
 		font-size: 1.2em;
@@ -724,17 +776,27 @@ button{
 		top: 0px;
 		right: 100px;
 		margin: 0px;
-		margin-top: 18px;		
+		margin-top: 25px;		
 		background-color: rgba(242, 246, 248, 0.91)
 	}
 
-	#infos_contact h3{
-		text-align: center;
-	}
-	#infos_contact{
-		padding: 10px;
+	#contact{
+		font-size: 2em;
+
 	}
 
+	#infos_contact h2{
+		text-align: left;
+		margin-left: 0px;
+	}
+
+	#infos_contact h3{
+		font-size: 1.1em;
+	}
+
+	#infos_contact p, h3{
+		text-align: left;
+	}
 
 
 }
