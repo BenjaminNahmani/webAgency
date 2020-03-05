@@ -76,12 +76,12 @@ h3{
     justify-content: center;
     flex-direction: row;
     align-items: center;
-    width: 146px;
+    width: 40%;
     margin: auto;
 }   
 
 .line{
-	width: 60px;
+	width: 40%;
     color: rgb(237, 237, 237);
 }
 
@@ -144,7 +144,7 @@ text-align: center;
 }
 
 span{
-	color: red; /* #5CADD3 */ /* Couleur BLEU du WEBAGENCY */
+	color: #5CADD3; /* Couleur BLEU du WEBAGENCY */
 }
 
 /* Seul les infos sont visible. */
