@@ -144,7 +144,7 @@ text-align: center;
 }
 
 span{
-	color: #5CADD3; /* Couleur BLEU du WEBAGENCY */
+	color: red; /* #5CADD3 */ /* Couleur BLEU du WEBAGENCY */
 }
 
 /* Seul les infos sont visible. */
